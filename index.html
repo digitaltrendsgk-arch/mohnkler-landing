@@ -1,27 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mi primera página</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Mohnkler · Recomendados Amazon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>¡Hola mundo!</h1>
-  <p>Esta es mi primera página web.</p>
+  <header class="topbar">
+    <div class="wrap">
+      <h1>Mohnkler · Recomendados</h1>
+      <p class="tagline">Mis picks favoritos en Amazon</p>
+    </div>
+  </header>
 
-  <!-- Botón -->
-  <button id="miBoton">Haz clic aquí</button>
+  <main class="wrap">
+    <p class="disclosure">
+      <strong>Transparencia:</strong> como afiliado de Amazon, puedo ganar comisiones por compras que califiquen. 
+    </p>
 
-  <!-- Imagen -->
-  <img src="mohnkler.png" alt="Mohnkler robot" width="300">
+    <section class="grid">
+      <!-- Producto 1 -->
+      <article class="card">
+        <img src="mohnkler.png" alt="Producto recomendado 1" class="card-img" />
+        <h2 class="card-title">Producto 1</h2>
+        <p class="card-text">Descripción breve del producto 1. ¿Por qué lo recomiendo?</p>
+        <a class="amazon-btn" target="_blank" rel="nofollow sponsored noopener"
+           href="https://www.amazon.com/dp/ASIN1?tag=TU-ID-AFILIADO-20">
+          Ver en Amazon
+        </a>
+      </article>
 
-  <!-- Enlace -->
-  <p>
-    Visitá mi sitio favorito: 
-    <a href="https://www.google.com" target="_blank">Google</a>
-  </p>
+      <!-- Producto 2 -->
+      <article class="card">
+        <img src="mohnkler.png" alt="Producto recomendado 2" class="card-img" />
+        <h2 class="card-title">Producto 2</h2>
+        <p class="card-text">Descripción breve del producto 2. Ventajas y uso.</p>
+        <a class="amazon-btn" target="_blank" rel="nofollow sponsored noopener"
+           href="https://www.amazon.com/dp/ASIN2?tag=TU-ID-AFILIADO-20">
+          Ver en Amazon
+        </a>
+      </article>
 
-  <script src="script.js"></script>
+      <!-- Producto 3 -->
+      <article class="card">
+        <img src="mohnkler.png" alt="Producto recomendado 3" class="card-img" />
+        <h2 class="card-title">Producto 3</h2>
+        <p class="card-text">Descripción breve del producto 3. Ideal para…</p>
+        <a class="amazon-btn" target="_blank" rel="nofollow sponsored noopener"
+           href="https://www.amazon.com/dp/ASIN3?tag=TU-ID-AFILIADO-20">
+          Ver en Amazon
+        </a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <small>© <span id="y"></span> Mohnkler · Hecho con GitHub Pages</small>
+    </div>
+  </footer>
+
+  <script>
+    // año automático en el footer (opcional)
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
