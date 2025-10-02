@@ -1,49 +1,82 @@
-/* Estilos generales */
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-  background-color: #f0f8ff;
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #333;
+:root{
+  --bg:#0f172a;
+  --panel:#111827;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --brand:#ff9900;  /* tono Amazon */
+  --brand-dark:#cc7a00;
+  --card:#0b1220;
+  --shadow:0 8px 24px rgba(0,0,0,.25);
 }
 
-/* Encabezado */
-h1 {
-  color: #ff6600;
-  font-size: 48px;
-  margin-top: 40px;
+*{box-sizing:border-box}
+
+html,body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:-apple-system, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  line-height:1.5;
 }
 
-/* Texto */
-p {
-  font-size: 20px;
-  color: #555;
+.wrap{max-width:1000px;margin:0 auto;padding:24px}
+
+.topbar{
+  background:linear-gradient(180deg, #0b1220, #0b1220);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.topbar h1{margin:0 0 4px 0;font-size:28px}
+.tagline{margin:0;color:var(--muted)}
+
+.disclosure{
+  background:rgba(255,255,255,.05);
+  border:1px dashed rgba(255,255,255,.12);
+  border-radius:12px;
+  padding:12px 14px;
+  margin:18px 0 24px 0;
+  color:var(--muted);
 }
 
-/* Botón */
-button {
-  margin-top: 20px;
-  padding: 12px 20px;
-  font-size: 18px;
-  background-color: #ff6600;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  gap:20px;
 }
 
-button:hover {
-  background-color: #cc5200;
+.card{
+  background:var(--card);
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:16px;
+  padding:18px;
+  box-shadow:var(--shadow);
 }
 
-/* Imagen */
-img {
-  margin-top: 20px;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+.card-img{
+  width:100%;
+  height:220px;
+  object-fit:contain;
+  background:#0a0f1a;
+  border-radius:12px;
 }
 
+.card-title{margin:12px 0 6px 0;font-size:20px}
+.card-text{margin:0 0 16px 0;color:var(--muted)}
+
+.amazon-btn{
+  display:inline-block;
+  padding:10px 16px;
+  background:var(--brand);
+  color:#111;
+  text-decoration:none;
+  font-weight:600;
+  border-radius:10px;
+  border:1px solid rgba(0,0,0,.25);
+}
+.amazon-btn:hover{background:var(--brand-dark)}
+
+.footer{
+  border-top:1px solid rgba(255,255,255,.06);
+  margin-top:36px;
+  color:var(--muted);
+  text-align:center;
+}
